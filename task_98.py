@@ -4,12 +4,19 @@ class TreeNode(object):
         self.left = left
         self.right = right
 def isValidBST(self, root):
-    def judge(node):
+    def judge(node, small, big):
         if node is None:
             return True
-        if (node.left < node.val or node.left is None) and (node.right > node.val or node.right is None):
-            judge(node.left)
-            judge(node.right)
-        else:
+        if not small < node.val < big:
             return False
-    return judge(root)
+        if not judge(node.left, small, node.val):
+            return False
+        if not judge(node.right, node.val, big):
+            return False
+        return True
+    return judge(root, float('-inf'), float('inf'))
+
+root = TreeNode(5)
+root.left = TreeNode(4)
+root.right = TreeNode(6)
+print(isValidBST(None, root))
