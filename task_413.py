@@ -14,4 +14,5 @@ def numberOfArithmeticSlices(self, nums):
         dp[i] = count - 2
     return sum(dp)
 
+
 print(numberOfArithmeticSlices(None, [1, 2, 3, 4, 7, 8, 9]))
