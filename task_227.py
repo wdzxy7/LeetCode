@@ -19,4 +19,4 @@ def calculate(self, s: str) -> int:
             num = 0
     return sum(stack)
 
-print(calculate(None, "1*2-3/4+5*6-7*8+9/10"))
+print(calculate(None, "14-3/2"))
