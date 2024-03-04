@@ -10,4 +10,4 @@ def combinationSum4(self, nums, target):
     return dp[-1]
 
 
-print(combinationSum4(None, [0], 0))
+print(combinationSum4(None, [1,2,3], 4))
