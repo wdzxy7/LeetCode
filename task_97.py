@@ -17,4 +17,4 @@ def isInterleave(self, s1, s2, s3):
     return dp[-1][-1]
 
 
-print(isInterleave(None, "a", "", "c"))
+print(isInterleave(None, "aabcc", "dbbca", "aadbbcbcac"))
