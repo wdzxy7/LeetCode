@@ -34,4 +34,4 @@ def profitableSchemes(self, n, minProfit, group, profit):
                 dp[j][i] = (dp[j][i] + dp[j - need][max(0, i - salary)]) % mod
     return dp[n][minProfit]
 
-print(profitableSchemes(None, 64, 0, [80,40],[88,88]))
+print(profitableSchemes(None, 10, 5, [2,3,5],[6,7,8]))

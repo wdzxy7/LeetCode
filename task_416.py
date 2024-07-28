@@ -11,4 +11,4 @@ def canPartition(self, nums):
     return dp[-1]
 
 
-print(canPartition(None, [1,2,5]))
+print(canPartition(None, [1,5,11,5]))
