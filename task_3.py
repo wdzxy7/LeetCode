@@ -29,4 +29,22 @@ def lengthOfLongestSubstring(self, s):
     return max_len
 
 
-print(lengthOfLongestSubstring(None, 'bbtablud'))
+def lengthOfLongestSubstring2(self, s):
+    window = []
+    max_len = 0
+    t_len = 0
+    for i in range(len(s)):
+        if s[i] in window:
+            max_len = max(t_len, max_len)
+            while len(window) > 0:
+                t = window[0]
+                t_len -= 1
+                del window[0]
+                if t == s[i]:
+                    break
+        t_len += 1
+        window.append(s[i])
+    return max(max_len, t_len)
+
+
+print(lengthOfLongestSubstring2(None, 'bbtablud'))
